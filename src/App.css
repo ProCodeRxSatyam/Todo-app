@@ -1,0 +1,55 @@
+body{
+    background-color: #ffeaa7;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 1rem;
+    color: hsl(198, 1%, 29%);
+    font-family: "Architects Daughter", cursive;
+}
+
+.container{
+   background: #f1f5f8;
+   width: 20rem;
+   height: 30rem;
+   border-radius: 20px;
+   box-sizing: border-box;
+   padding: 1rem;
+   background-image: radial-gradient(#bfc0c1 7.2%, transparent 0%);
+   background-size: 25px 25px;
+}
+.heading{
+   
+   display: flex;
+   justify-content: center;
+}
+.heading h1{
+  background: #fdcb6e;
+  transform: rotate(2deg);
+  padding: 1rem;
+  padding: 0.2rem 1.2rem;
+  border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+  font-size: 1.5rem;
+}
+
+.form input{
+   box-sizing: border-box;
+   background-color: transparent;
+   padding: 0.7rem;
+   border-bottom-left-radius: 7px 12px;
+   border-bottom-right-radius: 10px 5px;
+   border: solid 3px transparent;
+   border-bottom: dashed #eecd5e ;
+   font-family: "Architects Daughter", cursive;
+   font-size: 1rem;
+   color: hsla(260, 2%, 25%, 0.7);
+   width: 70%;
+   margin-bottom: 20px;
+}
+.form button{
+   box-sizing: border-box;
+   padding: 0.7rem;
+   font-family: "Architects Daughter", cursive;
+}
+
