@@ -24,17 +24,16 @@ function App() {
   function addItems(inputs) {
     setItems((prevValue) => [...prevValue, { id: Date.now(), inputs , isChecked : false }]);
   }
+
   function handleDelete(id) {
     setItems((prevValue) => prevValue.filter((item) => item.id !== id));
   }
-  // const EditedTask =  function handleEdit(task,id){
-  //   handleDelete(id);
-  //   return (task);
-  // }
+  
   function startEdit(inputs, id) {
     setEditedId(id);
     setEditedText(inputs);
   }
+
   function saveEdit(id) {
     setItems((prevValue) =>
       prevValue.map((todo) =>
@@ -44,6 +43,7 @@ function App() {
     setEditedId(null);
     setEditedText("");
   }
+  
   function toggleChecked(id){
     setItems((prevValue)=>
       prevValue.map((todo)=>todo.id===id? {...todo,isChecked: !todo.isChecked} : todo)
@@ -62,14 +62,14 @@ function App() {
             {items.map((item) => (
               <li className="taskDisplay" key={item.id}>
                 {editedId === item.id ? (
-                  <div className="form">
+                  <form className="form">
                     <input
                       type="text"
                       value={editedText}
                       onChange={(e) => setEditedText(e.target.value)}
                     />
                     <button onClick={() => saveEdit(item.id)}>Save</button>
-                  </div>
+                  </form>
                 ) : (
                   <>
                     <div>
